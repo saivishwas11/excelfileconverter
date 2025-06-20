@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML to Excel Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='excel.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>HTML to Excel Converter</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="file-input">
+                <input type="file" name="file" accept=".html" required>
+            </div>
+            <button type="submit">Convert to Excel</button>
+        </form>
+        <p class="note">Upload your HTML file to convert it to Excel format</p>
+    </div>
+</body>
+</html>
