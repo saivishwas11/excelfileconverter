@@ -25,7 +25,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 CORS(app, resources={
     r"/api/*": {
@@ -376,7 +376,7 @@ def convert_html_to_excel():
 # Keep the original route for backward compatibility
 @app.route('/')
 def index():
-    return render_template('excel.html')
+    return render_template("file.html")
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
