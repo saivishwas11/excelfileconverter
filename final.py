@@ -374,11 +374,6 @@ def convert_html_to_excel():
             'details': str(e)
         }), 500
 
-# Keep the original route for backward compatibility
-@app.route('/')
-def index():
-    return render_template("file.html")
-
 @app.route('/upload', methods=['POST'])
 def upload_file():
     temp_output = None
@@ -438,4 +433,4 @@ def upload_file():
     return send_file(temp_output, as_attachment=True, download_name=download_filename)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)
