@@ -15,6 +15,14 @@ import os
 
 st.set_page_config(page_title="HTML to Excel Converter", layout="centered")
 
+hide_github_icon = """
+    <style>
+    a[aria-label="View source code"] {
+        display: none !important;
+    }
+    </style>
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
