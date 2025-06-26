@@ -7,3 +7,4 @@ python-magic==0.4.27
 python-magic-bin==0.4.14
 webcolors==24.11.1
 werkzeug==2.3.7 
+streamlit==1.35.0
